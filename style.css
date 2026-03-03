@@ -1,75 +1,56 @@
-/* МОБИЛЬНАЯ АДАПТАЦИЯ - КОМПАКТНАЯ */
-@media (max-width: 500px) {
-    .container {
-        padding: 10px;
-    }
+/* Стили для всех кнопок на странице */
+.button, 
+a.button, 
+button, 
+[class*="btn"] {
+    /* Основные стили */
+    display: inline-block;
+    padding: 16px 32px;          /* Увеличил внутренние отступы */
+    margin: 10px 0;              /* Отступы между кнопками */
     
-    .header-top {
-        padding-bottom: 8px;
-        margin-bottom: 15px;
-    }
+    /* Самая важная часть - форма "таблетки" */
+    border-radius: 50px;          /* Большое скругление */
     
-    .brand-title {
-        font-size: 1rem;
-    }
+    /* Текст */
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
     
-    .header-phone {
-        font-size: 0.9rem;
-    }
+    /* Цвета - выберите одну из предложенных ниже тем */
+    /* ВАРИАНТ 1: Синие градиентные (как пример) */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     
-    .button-row {
-        gap: 6px;
-        margin-bottom: 8px;
-    }
+    /* Плавные переходы для анимации */
+    transition: all 0.3s ease;
     
-    .square-btn {
-        padding: 4px;
-        border-radius: 8px;
-        border-width: 1px;
-    }
+    /* Чтобы текст не переносился */
+    white-space: nowrap;
+}
+
+/* Эффект при наведении */
+.button:hover,
+a.button:hover,
+button:hover,
+[class*="btn"]:hover {
+    transform: translateY(-2px);           /* Легкое поднятие */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
     
-    .btn-icon {
-        font-size: 1.3rem;
-        margin-bottom: 3px;
-    }
+    /* Для градиента - меняем направление */
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
     
-    .btn-text {
-        font-size: 0.65rem;
-        line-height: 1.2;
-    }
-    
-    .lawyer-row {
-        margin-bottom: 8px;
-    }
-    
-    .lawyer-btn {
-        padding: 10px;
-        gap: 8px;
-        border-width: 1px;
-    }
-    
-    .lawyer-btn .btn-icon {
-        font-size: 1.6rem;
-    }
-    
-    .lawyer-btn .btn-text {
-        font-size: 0.9rem;
-    }
-    
-    footer {
-        margin-top: 20px;
-        padding-top: 15px;
-    }
-    
-    footer p {
-        font-size: 0.75rem;
-    }
-    
-    .footer-links {
-        gap: 8px;
-    }
-    
-    .footer-link {
-        font-size: 0.75rem;
-    }
+    cursor: pointer;
+}
+
+/* Эффект при нажатии */
+.button:active,
+a.button:active,
+button:active,
+[class*="btn"]:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
